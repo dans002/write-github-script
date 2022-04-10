@@ -25,7 +25,9 @@ jobs:
       - name: Add issue to project board
         if: contains(github.event.issue.labels.*.name, 'bug')
         uses: actions/github-script@0.8.0
-        with: |
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          scripte: |
             github.projects.createCard({
               column_id: 18418996,
               content_id: context.payload.issue.id,
