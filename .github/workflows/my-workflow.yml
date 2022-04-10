@@ -8,6 +8,9 @@ jobs:
   comment:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        
       - name: Comment ons new issu
         uses: actions/github-script@0.8.0
         with:
