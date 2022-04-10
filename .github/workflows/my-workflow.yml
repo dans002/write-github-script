@@ -1,7 +1,7 @@
 name: Learning GitHub Script
 
 on: 
-  issues
+  issues:
     types: [opened]
     
 jobs:
